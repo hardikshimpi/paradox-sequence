@@ -1,0 +1,50 @@
+import type { LevelDef } from '../types';
+
+export const level14: LevelDef = {
+  id: 14,
+  name: 'No Room for Mistakes',
+  objective: 'Three doors, three plates — and only two ghost slots.',
+  difficulty: 4,
+  timeLimit: 12,
+  maxGhosts: 2,
+  map: [
+    '########################',
+    '########################',
+    '#.......################',
+    '#.......################',
+    '#.......################',
+    '#.......################',
+    '#.......################',
+    '#.......################',
+    '#.......################',
+    '#.......F....G..CC.H...#',
+    '#....BB.F....G..##.H...#',
+    '#...----F....G..##.H.E.#',
+    '#A.S....F....G.###.H.E.#',
+    '########################',
+  ],
+  legend: {
+    A: { type: 'plate' },
+    B: { type: 'plate' },
+    C: { type: 'plate' },
+    F: { type: 'door', when: 'A' },
+    G: { type: 'door', when: 'B' },
+    H: { type: 'door', when: 'C' },
+  },
+  signs: [
+    { col: 4, row: 3, text: 'Only two ghosts fit.' },
+    { col: 4, row: 3.6, text: 'Make one of them work twice.' },
+  ],
+  hints: [
+    'The first two plates are close together, but you never need both doors open at the same moment.',
+    'One ghost can hold the first plate while you pass, then walk to the second plate before you reach the second door.',
+    'Attempt 1: stand on the floor plate, then about 2 seconds in hop up onto the ledge plate. Attempt 2: rush through the first door, wait at the second, then climb onto the far plate. Attempt 3: same route, but keep going to the exit.',
+  ],
+  intended: 'Ghost 1 holds the first plate, then moves to the second once you are through. Ghost 2 takes your route and holds the third plate.',
+  solution: [
+    ['go 1', 'until 2', 'go 4', 'jump 5', 'land', 'end'],
+    ['go 14', 'jump 15', 'land', 'jump 16', 'land', 'end'],
+    ['go 14', 'jump 15', 'land', 'jump 16', 'land', 'go 21'],
+  ],
+  parTime: 36,
+};

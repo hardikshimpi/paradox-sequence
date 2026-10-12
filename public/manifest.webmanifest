@@ -1,0 +1,11 @@
+{
+  "name": "Paradox Sequence",
+  "short_name": "Paradox",
+  "description": "A time-loop puzzle game: every attempt becomes a ghost that repeats your moves.",
+  "start_url": "/",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#060913",
+  "theme_color": "#060913",
+  "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}
